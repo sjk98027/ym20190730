@@ -1,22 +1,16 @@
 package employee.model;
 
+import java.util.List;
+
 public interface EmpService {
-	public void registerEmp(Employee emp, Employee[] ary);
-	public void searchEmp(int empId, Employee[] ary);
-	public void empList(Employee[] ary);
-	public void empUpdate(Employee emp, Employee[] ary);
-	public void empDelete(int empId, Employee[] ary);
-	default void setDetp(int empId,int deptId,Employee[] ary) {
-		for(int i=0; i<ary.length; i++) {
-			if(ary[i] !=null && ary[i].getEmpployeeId() == empId)
-				ary[i].setDepartmentId(deptId);
-		}
-	}
+	public Employee getEmployee(int empId);
+	public List<Employee> getEmployeeList();
+	public List<Employee> getEmployeeList(String hireDate);
+	public void insertEmp(Employee emp);
+	public void updateEmp(int empId, int salary);
+	public void updateEmp(Employee emp);
+	public void deleteEmp(int empId);
 	
-	public Employee returnEmp(int employeeId, Employee[] employees);
-	static void showDept(Department[] departments) {
-		for(int i=0; i<departments.length; i++) {
-			System.out.println(departments[i].toString());
-		}
-	}
+	
+	
 }

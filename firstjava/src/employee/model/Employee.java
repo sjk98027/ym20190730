@@ -1,71 +1,94 @@
 package employee.model;
 
+import java.sql.Date;
+
 public class Employee {
-	private	int employeeId;
-	private String firstName;
-	private String lastName;
-	private int salary;
-	private int departmentId;
+	int employeeId;
+	String firstName;
+	String lastName;
+	String email;
+	String phoneNumber;
+	Date hireDate;
+	String jobId;
+	int salary;
+	int commissionPCT;
+	int managerId;
+	int departmentId;
 	
-	
-
-	public Employee(int employeeId, String firstName, String lastName, int salary) {
-		super();
-		this.employeeId = employeeId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.salary = salary;
-	}
-
-	public int getEmpployeeId() {
+	public int getEmployeeId() {
 		return employeeId;
 	}
-
-	public void setEmpployeeId(int empployeeId) {
-		this.employeeId = empployeeId;
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
 	}
-
 	public String getFirstName() {
 		return firstName;
 	}
-
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
 	public String getLastName() {
 		return lastName;
 	}
-
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public Date getHireDate() {
+		return hireDate;
+	}
+	public void setHireDate(Date hireDate) {
+		this.hireDate = hireDate;
+	}
+	public String getJobId() {
+		return jobId;
+	}
+	public void setJobId(String jobId) {
+		this.jobId = jobId;
+	}
 	public int getSalary() {
 		return salary;
 	}
-
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-
-	@Override
-	public String toString() {
-		return  "사원번호 : "+ employeeId+"\n"+
-				"성 : "+firstName+"\n"+
-				"이름 : "+lastName+"\n"+
-				"급여 : "+salary+"\n"+
-				"부서 : " + departmentId;
+	public int getCommissionPCT() {
+		return commissionPCT;
 	}
-
-	public void setDepartmentId(int deptId) {
-		this.departmentId = deptId;
-		
+	public void setCommissionPCT(int commissionPCT) {
+		this.commissionPCT = commissionPCT;
+	}
+	public int getManagerId() {
+		return managerId;
+	}
+	public void setManagerId(int managerId) {
+		this.managerId = managerId;
 	}
 	public int getDepartmentId() {
 		return departmentId;
 	}
+	public void setDepartmentId(int departmentId) {
+		this.departmentId = departmentId;
+	}
+	@Override
+	public String toString() {
+		String val =employeeId + "\t" + firstName + "\t" + lastName; 
+		return val;
+		
+	}
 	
 	
 	
+
 }
